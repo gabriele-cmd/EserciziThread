@@ -23,14 +23,14 @@ class Test {
 
             @Override
             public void run() {
-                for (int i = 0; i < 600; i++) {
+                for (int i = 0; i < 800; i++) {
                     badCounter.increment();
-                    Test.sleepRandomlyForLessThan10Secs();
-//                    try {
-//                        Thread.sleep(50);
-//                    } catch (InterruptedException ex) {
-//                        Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
+//                    Test.sleepRandomlyForLessThan10Secs();
+                    try {
+                        Thread.sleep(5);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
         });
@@ -40,14 +40,14 @@ class Test {
 
             @Override
             public void run() {
-                for (int i = 0; i < 600; i++) {
+                for (int i = 0; i < 800; i++) {
                     badCounter.decrement();
                     Test.sleepRandomlyForLessThan10Secs();
-//                    try {
-//                        Thread.sleep(50);
-//                    } catch (InterruptedException ex) {
-//                        Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
+                    try {
+                        Thread.sleep(5);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }
         });

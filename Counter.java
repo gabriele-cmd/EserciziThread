@@ -12,11 +12,11 @@ package com.mycompany.threadexercise;
 public class Counter {
     int counter = 0;
     
-    void increment(){
+    synchronized void increment(){
         counter++;
     }
     
-    void decrement(){
+    synchronized void decrement(){
         counter--;
     }
     
